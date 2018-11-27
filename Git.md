@@ -41,6 +41,8 @@ $ git config --global user.email johndoe@example.com
 $ git config user.name "John Doe"
 $ git config user.email johndoe@example.com
 //設定此次提交的資訊
+$ git remote add origin git@github.com:kaochenlong/practice-git.git
+//加入遠端庫
 ```
 ***
 ## 創建Git專案
@@ -111,7 +113,9 @@ $ git commit -a
 
 ```go
 $git push [remote-name] [branch-name]
-//例如:$ git push origin mas
+//例如:$ git push origin master
+$ git push -f origin master
+//絕對上傳
 ```
 ### **`補充`**
 1.刪除預存區的檔案
@@ -171,6 +175,7 @@ $ git fetch [remote-name] [refspec]
 > 可以把遠端數據庫修改的內容合併到本地端數據庫(pull = fetch + merge)
 ```go
 $ git pull <repository> <refspec>
+$ git pull --rebase //内容抓下来之后请使用 Rebase 方式合并
 ```
 ### **7.查看commit的訊息**
 ```go
