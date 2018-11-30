@@ -54,8 +54,10 @@ module.exports = {
   "main": "index.js",
   //-------------------------------------------//
   "scripts": {
-    "watch": "webpack --watch",
-    "prod": "webpack -p"
+    "watch":"webpack --mode development --watch", //自動執行webpack(監聽)
+    "start":"webpack --mode development", //development為不壓縮版本
+    "deplay":"webpack --mode production", //production為壓縮版本
+    "webpack": "webpack" //自動執行為壓縮版本
   },
   //-------------------------------------------//
 ```
