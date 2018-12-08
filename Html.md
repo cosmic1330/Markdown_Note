@@ -126,3 +126,5 @@
 </label>
 //顯示連繫
 ```
+## Preload & Prefetch
+>對於當前頁面很有必要的資源使用 preload，對於可能在將來的頁面中使用的資源使用 prefetch

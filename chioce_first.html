@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>選取器優先權</title>
+    <script src="./dist/index_bundle.js"></script>
+</head>
+<style>
+        div{
+            color:gray;
+        }
+        div[name="bb"]{
+            color: red;
+        }
+        #cc{
+            color:blue;
+        }
+        div .x3 {
+            color:deeppink;
+        }
+        div+.x4{
+            color: green;
+        }
+        div~.x5{
+            color:darkorange
+        }
+        div>.x6{
+            color:black
+        }
+        .aa{
+            font-size: 60px;
+            font-style: italic;
+            color:wheat;
+        }
+        div:nth-last-of-type(1){
+            color: rgb(4, 221, 40);
+        }
+    </style>
+    <body>
+     <div>選取器的優先權</div>
+     
+     <li>"Tag" < "class" < "[]" < "~"、"+"、" "、"＜" < ":" < "id"</li>
+     <li>同級<先後順序</li>
+     <li>繼承<明確性</li>
+     <div class="aa x1" name="bb">hello</div>
+    
+     <div class="aa x2" id="cc" >hello</div>
+    
+     <div class="aa x3"><span class="x3" >hello</span><span class="x3"> world</span></div>
+    
+     <div></div>
+     <span class="aa x4" >hello</span><span class="aa x4">world</span>
+    
+     <div></div>
+     <span class="aa x5" >hello </span><span class="aa x5">world</span>
+    
+     <div class="aa "><span class="x6 ">hello </span><span class="x6">world</span></div>
+    
+     <div class="aa x7">abc</div>
+    
+     
+
+</body>
+
+</html>
