@@ -18,3 +18,5 @@
 > 刪除本 行
 ## 9. Ctrl+/
 > 添加註解
+## 10.Ctrl+P 輸入> 選擇emmet:wrap 輸入class
+> 添加class div 包覆所選取的DOM

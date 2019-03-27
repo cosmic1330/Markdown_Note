@@ -6,6 +6,8 @@
 > 在資料夾啟用node.js服務，創建package.json文件。
 ```go
 $npm init
+$npm install
+$npm run watch
 ```
 ### **2. 使用終端機安裝webpack**
 > 安裝後產生node_modules資料夾，且package.json文件裡會出現webpack版本訊息。
@@ -40,6 +42,9 @@ $npm install -g webpack webpack-cli
   },
   //-------------------------------------------//
 ```
+> npm run watch;
+npm run dev;
+npm run start;
 ### **5. 設定好就可以開始壓縮囉**
 - 使用webpack壓縮檔案`(如果未設定--mode development都會自動文字壓縮)`
 ```go
