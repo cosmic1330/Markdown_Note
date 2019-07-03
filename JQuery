@@ -1,0 +1,8 @@
+#lazyload
+> 使用each觀念
+```js
+$().each(function(index.img){
+  $(img).offset.top+
+})
+
+```
