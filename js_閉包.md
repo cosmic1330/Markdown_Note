@@ -13,40 +13,33 @@
   const(0);
   //得到1
 ```
-
+##Closure 結合 CallBack Funciton
+> 利用以上兩個方式，便可取出 一些預設物件方法內的值 ex:ajax
 
 ```js
- function throttling(func, wait = 20, immediate = true) {
-        var timeout;
-        return function() {
-          var context = this,
-            args = arguments;
-          var later = function() {
-            timeout = null;
-            // if (!immediate)
-            func.apply(context, args);
-          };
-          if (timeout) return;
-          var callNow = immediate && !timeout;
-          clearTimeout(timeout);
-          timeout = setTimeout(later, wait);
-          if (callNow) func.apply(context, args);
-        };
-      }
-
-      let images = document.querySelectorAll("img");
-      function scrollHandler() {
-        let windowTop = window.scrollY;
-        let windowBottom = windowTop + window.innerHeight;
-        images.forEach(img => {
-          let imgMiddle = img.offsetTop + img.height / 2;
-          if (imgMiddle < windowBottom && imgMiddle > windowTop) {
-            img.classList.add("active");
-          } else {
-            img.classList.remove("active");
-          }
+  function formatStoreName(value,row,index){
+        //先建立Clouser內的全域變數
+        let self='';
+        $.ajax({
+            type: "POST",
+            url: "./getStoreName",
+            data: {
+                storeId: value,
+            },
+            async: false,
+            success: function (data) {
+                //呼叫Clouser的function
+                name(data);
+            },
+            error: function (XMLHttpRequest, textStatus, errorThrown) {
+                console.log(errorThrown);
+            }
         });
-      }
-
-      window.addEventListener("scroll", throttling(scrollHandler));
+        //建立Clouser的function 方法內回傳原全域變數
+        function name(value){
+            console.log(value);
+            return self=value;
+        }
+        return self;
+	}
 ```
