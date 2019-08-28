@@ -1,6 +1,6 @@
-# **Html 重點整理**
+# **Html 第二天 | 認識語意標籤**
 ![HTMLXMind](/image/Html.png)
-## **`語意標籤`**
+## **`Content sectioning 語意標籤`**
 > 提供瀏覽器更容易導讀
 
 ![語意標籤](/image/website_html5_area-1.png)
@@ -128,3 +128,6 @@
 ```
 ## Preload & Prefetch
 >對於當前頁面很有必要的資源使用 preload，對於可能在將來的頁面中使用的資源使用 prefetch
+
+下一章節我們將詳細來介紹
+**metadata 元件腳本標籤**
